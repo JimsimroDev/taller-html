@@ -1,0 +1,79 @@
+<!-- Actividad 1 Crear archivo index.html--->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="" href="recursos/css/stilos.css" />
+  <!-- Actividad 2 insertar un favicon en la pagina web --->
+  <link rel="icon" href="image/logo.ico" type="image/x-icon" />
+  <title>taller</title>
+</head>
+
+<body>
+  <!--este es la cabecera utilizado para el contenido de introducción como el navbar-->
+  <header>
+    <div class="caja">
+      <!-- Actividad 3 insertar imagenes y enlaces --->
+      <h1><img class="logo" src="image/logo.jpg" /></h1>
+
+      <nav>
+        <ul class="navegacion">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html" target="_blank">Productos</a></li>
+          <li><a href="#" class="open-modal-btn">Contactanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- El main es para indicar que este es el contenido principal-->
+  <main>
+    <h1>Taller HTML5 (15%) Lenguaje de Programacion 2</h1>
+
+    <!-- Actividad 4 Crear un formulario sencillo lo cree que sea un modal -->
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Formulario de Contacto</h2>
+        <form action="">
+          <label for="nombreapellido">Nombre y apellido</label>
+          <input class="input" type="text" id="nombreapellido" required />
+
+          <label for="correoelectronico">Correo electronico</label>
+          <input class="input" type="email" id="correoelectronico" required />
+
+          <label for="telefono">Telefono</label>
+          <input class="input" type="text" id="telefono" required />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea class="input" id="mensaje" cols="70" rows="10" required></textarea>
+
+          <fieldset>
+            <legend class="test">Como le gustario ser contactado</legend>
+            <label for="radio-email">
+              <input type="radio" name="contacto" value="email" id="radio-email" />email</label>
+
+            <label for="radio-telefono">
+              <input type="radio" name="contacto" value="telefono" id="radio-telefono" />telefono</label>
+
+            <label for="radio-whatsap">
+              <input type="radio" name="contacto" value="whatsap" id="radio-whatsap" checked />whatsap</label>
+          </fieldset>
+          <input type="submit" value="Enviar formulario" class="enviar" />
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- El footer es para indicar el pie de pagina y el Copyright--->
+  <footer>
+    <img src="image/logo.jpg" />
+    <p class="Copyright">&copy Copyright Taller de html - 2024</p>
+  </footer>
+
+  <script src="recursos/js/app.js"></script>
+</body>
+
+</html>
