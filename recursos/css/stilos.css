@@ -1,33 +1,59 @@
 
 body{
-background: linear-gradient(to bottom, rgba(12, 17, 22, 0.5),  #141414);
+background: linear-gradient(to left, #CC88C7, #BC9AFA);
 }
 
+/* Color y estilo de la cabezera */
+header{
+background: linear-gradient(to left, #BC9AFA, #CC88C7);
+  padding: 0 0;
+  border-radius: 30px;
+  position: relative;
+}
+
+/* Estilo para el contenedor del navbar */
 .caja{
   width: 940px;
   position: relative;
   margin: 0 auto;
 }
+
+nav{
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+/* Estilos para la lista */
+nav li{
+  display: inline;
+  margin: 0 0 0 16px;
+}
+
+/* Estilo para el navbar que lleva a los enlaces y formulario */
+nav a{
+  text-transform: uppercase;
+  color: black;
+  font-size: 22px;
+  text-decoration: none;
+}
 .img{
   width: 100%;
 }
+
+/* Estilos para el modal que es el formulario */
 .modal{
   display: none;
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 60rem;
-  height: 60rem;
+  top: 45px;
+  width: 67rem;
   z-index: 1;
   overflow: auto;
-  justify-content: center;
-  align-items: center;
 }
   
 .modal-content{
  background: linear-gradient(to bottom, rgba(224, 22, 112, 0.5),  #E016E0);
   margin-left: 50%;
-  margin-top: 10%;
   color: #141414;
   padding: 20px;
   border-radius: 20px;
@@ -44,8 +70,16 @@ background: linear-gradient(to bottom, rgba(12, 17, 22, 0.5),  #141414);
   border-radius: 25px;
 }
 
+thead{
+  background: #555555;
+}
+td, th{
+  border: 1px solid #000000;
+  padding: 8px 15px;
+}
+
   footer{
-    padding: 40px;
+    padding: 0px;
     text-align: center;
     background: url(../../image/bg.jpg)
   }

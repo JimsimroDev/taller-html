@@ -16,12 +16,13 @@
   <header>
     <div class="caja">
       <!-- Actividad 3 insertar imagenes y enlaces --->
-      <h1><img class="logo" src="image/logo.jpg" /></h1>
+      <h1><img class="logo" src="image/logo.png" /></h1>
 
+      <!--- Ejemplo de lista desordenada ul --->
       <nav>
         <ul class="navegacion">
           <li><a href="index.html">Home</a></li>
-          <li><a href="productos.html" target="_blank">Productos</a></li>
+          <li><a href="https://www.uniremington.edu.co/carreras-universitarias/" target="_blank">Cursos</a></li>
           <li><a href="#" class="open-modal-btn">Contactanos</a></li>
         </ul>
       </nav>
@@ -31,6 +32,8 @@
   <!-- El main es para indicar que este es el contenido principal-->
   <main>
     <h1>Taller HTML5 (15%) Lenguaje de Programacion 2</h1>
+    <p>Este es una pagina maquetada con html y css </p>
+    <p>Pero tambien se uso un poco de js para funcioalidades en el boton de contactanos</p>
 
     <!-- Actividad 4 Crear un formulario sencillo lo cree que sea un modal -->
     <div class="modal" id="contactModal">
@@ -42,10 +45,10 @@
           <input class="input" type="text" id="nombreapellido" required />
 
           <label for="correoelectronico">Correo electronico</label>
-          <input class="input" type="email" id="correoelectronico" required />
+          <input class="input" type="email" id="correoelectronico" required placeholder="ejemplo@gmail.com" />
 
           <label for="telefono">Telefono</label>
-          <input class="input" type="text" id="telefono" required />
+          <input class="input" type="text" id="telefono" required placeholder="(xxx)-xxx-xxxx" />
 
           <label for="mensaje">Mensaje</label>
           <textarea class="input" id="mensaje" cols="70" rows="10" required></textarea>
@@ -61,15 +64,51 @@
             <label for="radio-whatsap">
               <input type="radio" name="contacto" value="whatsap" id="radio-whatsap" checked />whatsap</label>
           </fieldset>
+          <fieldset>
+            <legend>En que horario desea ser contactado </legend>
+            <select>
+              <option value="">Mañana</option>
+              <option value="">Noche</option>
+              <option value="">Tarde</option>
+            </select>
+          </fieldset>
+          <label for=""><input type="checkbox" name="" value="">Le gustaria recibir novedades ?</label>
           <input type="submit" value="Enviar formulario" class="enviar" />
         </form>
       </div>
     </div>
+
+    <!--- Actividad 5 uso de tabla el uso de lista esta en el navbar --->
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reloj</td>
+          <td>$120000</td>
+        </tr>
+
+        <tr>
+          <td>Cadena</td>
+          <td>$320000</td>
+        </tr>
+
+        <tr>
+          <td>Cartera</td>
+          <td>$20000</td>
+        </tr>
+      </tbody>
+    </table>
+
   </main>
 
   <!-- El footer es para indicar el pie de pagina y el Copyright--->
   <footer>
-    <img src="image/logo.jpg" />
+    <img src="image/bg1.png" />
     <p class="Copyright">&copy Copyright Taller de html - 2024</p>
   </footer>
 
