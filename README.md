@@ -6,4 +6,4 @@ La principal caracteristica de esta pagina es que es una maqueta en html con est
 ![[./image/ejemplo.png]]
 
 ### Cuando se le de click en contactanos te mostrara el siguiente formulario
-![[./image/formulario.png]]
+![iamgen del formulario](./image/formulario.png)
