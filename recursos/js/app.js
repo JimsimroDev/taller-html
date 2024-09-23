@@ -26,3 +26,25 @@ window.onclick = function (event) {
   }
 }
 
+// funcion para cambiar el theme
+const mainSection = document.getElementById('main-section');
+const headerSection = document.getElementById('header-section');
+const themeSelector = document.getElementById('theme-selector');
+const themeSectionOne = document.getElementById('section-one');
+
+themeSelector.addEventListener('click', () => {
+  // Cambia entre "light" y "dark" para ambos elementos
+  const currentMainTheme = mainSection.dataset.theme;
+  const currentHeaderTheme = headerSection.dataset.header;
+  const currenSetionOneTheme = themeSectionOne.dataset.section;
+
+  mainSection.dataset.theme = currentMainTheme === "dark" ? "light" : "dark";
+  headerSection.dataset.header = currentHeaderTheme === "dark" ? "light" : "dark";
+  themeSectionOne.dataset.section = currenSetionOneTheme === "dark" ? "light" : "dark";
+
+});
+
+
+
+
+
