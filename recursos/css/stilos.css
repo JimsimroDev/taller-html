@@ -163,6 +163,10 @@ nav a:hover {
   flex-direction: column;
 }
 
+.codigoFuento {
+  color: #E016E0;
+}
+
 .card-section {
   display: flex;
   flex-wrap: wrap;
