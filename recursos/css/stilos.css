@@ -1,15 +1,15 @@
-
-body{
-/*background: linear-gradient(to left, #CC88C7, #BC9AFA);*/
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
+body {
+  /*background: linear-gradient(to left, #CC88C7, #BC9AFA);*/
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Color y estilo de la cabezera */
-header{
+header {
+  box-shadow: 0 0 2em rgb(12, 17, 22);
   width: 85rem;
-  height: 10rem;
+  height: 6rem;
   left: 4rem;
   top: 1rem;
   border-radius: 30px;
@@ -17,8 +17,14 @@ header{
   margin-bottom: 3rem;
 }
 
+/* Estilo para la imagen que es el logo*/
+.logo {
+  margin: 0;
+  margin-top: 6px;
+}
+
 /* Estilo para el contenedor del navbar */
-.caja{
+.caja {
   width: 940px;
   position: relative;
   margin: 0 auto;
@@ -26,21 +32,27 @@ header{
 
 nav {
   position: absolute;
-  top: 110px;
+  top: 66px;
   right: 0;
 }
 
 /* Estilos para la lista */
 .navegacion {
-  list-style-type: none; /* Elimina los puntos de la lista */
-  padding: 0; /* Elimina el padding por defecto */
-  margin: 0; /* Elimina el margin por defecto */
+  list-style-type: none;
+  /* Elimina los puntos de la lista */
+  padding: 0;
+  /* Elimina el padding por defecto */
+  margin: 0;
+  /* Elimina el margin por defecto */
 }
 
 nav li {
-  display: inline-block; /* Cambia a inline-block para mejor control de posición */
-  margin: 0 16px; /* Margen horizontal entre los elementos */
-  position: relative; /* Necesario para el pseudo-elemento */
+  display: inline-block;
+  /* Cambia a inline-block para mejor control de posición */
+  margin: 0 16px;
+  /* Margen horizontal entre los elementos */
+  position: relative;
+  /* Necesario para el pseudo-elemento */
 }
 
 /* Estilo para los enlaces */
@@ -48,84 +60,101 @@ nav a {
   text-transform: uppercase;
   color: #CE8E8C;
   font-size: 22px;
-  text-decoration: none; /* Sin subrayado inicialmente */
-  position: relative; /* Necesario para el pseudo-elemento */
+  text-decoration: none;
+  /* Sin subrayado inicialmente */
+  position: relative;
+  /* Necesario para el pseudo-elemento */
 }
 
 nav a:hover {
-   /* Cambia el color al pasar el cursor */
+  /* Cambia el color al pasar el cursor */
   color: #82D2CF;
 }
 
 .navegacion a::after {
-  content: ''; /* Necesario para crear un pseudo-elemento */
+  content: '';
+  /* Necesario para crear un pseudo-elemento */
   position: absolute;
-  left: 0; /* Posiciona el subrayado a la izquierda */
-  right: 0; /* Posiciona el subrayado a la derecha */
-  bottom: -5px; /* Coloca el pseudo-elemento debajo del texto */
-  height: 2px; /* Grosor del subrayado */
-  background-color: #9a5df5; /* Color del subrayado */
-  transform: scaleX(0); /* Inicialmente no visible */
-  transition: transform 0.3s ease; /* Transición para el efecto */
+  left: 0;
+  /* Posiciona el subrayado a la izquierda */
+  right: 0;
+  /* Posiciona el subrayado a la derecha */
+  bottom: -5px;
+  /* Coloca el pseudo-elemento debajo del texto */
+  height: 2px;
+  /* Grosor del subrayado */
+  background-color: #9a5df5;
+  /* Color del subrayado */
+  transform: scaleX(0);
+  /* Inicialmente no visible */
+  transition: transform 0.3s ease;
+  /* Transición para el efecto */
 }
 
 .navegacion a:hover::after {
-  transform: scaleX(1); /* Muestra el subrayado al hacer hover */
+  transform: scaleX(1);
+  /* Muestra el subrayado al hacer hover */
 }
 
-.img{
+.img {
   width: 100%
 }
 
 /* Estilo para cambiar de tema a dark*/
-.header-section[data-header="dark"]{
+.header-section[data-header="dark"] {
   background-color: #010408;
   box-shadow: 0 0 1em rgb(188, 154, 250);
   transition: 0.4s;
 }
 
-.main-section[data-theme="dark"]{
-background-color: #0C1116;
-color: #82D2CF;
-transition: 0.4s;
+.main-section[data-theme="dark"] {
+  background-color: #0C1116;
+  color: #82D2CF;
+  transition: 0.4s;
 }
 
-.section-one[data-section="dark"]{
-background-color: #010408;
-box-shadow: 0 0 1em rgb(188, 154, 250);
-transition: 0.4s;
+.section-one[data-section="dark"] {
+  background-color: #010408;
+  box-shadow: 0 0 1em rgb(188, 154, 250);
+  transition: 0.4s;
 }
 
 /* Estilo para cambiar de tema a light*/
-.header-section[data-header="light"]{
-background: linear-gradient(to left, #CEB6FC, #FFFFFF);
-transition: 0.4s;
+.header-section[data-header="light"] {
+  background: linear-gradient(to left, #CEB6FC, #FFFFFF);
+  transition: 0.4s;
 }
 
-.main-section[data-theme="light"]{
+.main-section[data-theme="light"] {
   background-color: #cccccc;
   background: linear-gradient(to bottom, #CEB6FC, #e1d6fe);
   transition: 0.4s;
 }
 
-.primer-titulo{
-font-size: 24px;
-text-align: center;
-font-family: Silkscreen, sans-serif;
-font-style: bold;
+.section-one[data-section="light"] {
+  background: radial-gradient(circle, #9a5df5, #CEB6FC);
 }
 
-.section-one{
-  background-color: #9a5df5;
+.primer-titulo {
+  font-size: 24px;
+  text-align: center;
+  font-family: Silkscreen, sans-serif;
+  font-style: bold;
+}
+
+.section-one {
   border-radius: 3rem;
+  pointer-events: none;
+  transition: background 0.3s;
   width: 75rem;
   margin-left: 8rem;
+  position: adsolute;
   padding: 1rem;
   backdrop-filter: blur(12px);
-font-family: Silkscreen, sans-serif;
+  font-family: Silkscreen, sans-serif;
 }
 
-.contenido{
+.contenido {
   display: flex;
   color: #82D2CF;
   width: 72rem;
@@ -134,55 +163,57 @@ font-family: Silkscreen, sans-serif;
   flex-direction: column;
 }
 
-.card-section{
-display: flex;
-flex-wrap: wrap;
-align-items: flex-start;
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.card{
-background: transparent;
-position: relative;
-margin: 1rem;
-top: 2rem;
-left: 6rem;
-transition: 0.5s;
+.card {
+  background: transparent;
+  position: relative;
+  margin: 1rem;
+  top: 2rem;
+  left: 6rem;
+  transition: 0.5s;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(0.9);
 }
 
 .card-img-top {
-    width: 100%;
-    height: 23rem;
-    object-fit: cover;
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1em rgb(188, 154, 250);
-  }
-
-.overlay {
- background: linear-gradient(to bottom, rgba(154, 93, 245, 0.2), rgba(232, 221, 253, 0.3));
- height: 100%;
- width: 100%;
- position: absolute;
- top: 0;
- left: 0;
+  width: 100%;
+  height: 23rem;
+  object-fit: cover;
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1em rgb(188, 154, 250);
 }
 
- .card-body {
- position: absolute;
- bottom: 0; /* Alinea el contenido al fondo de la tarjeta */
- width: 100%;
- color: white;
- backdrop-filter: blur(5px); /* Efecto de desenfoque */
- border-top-left-radius: 10px;
- border-top-right-radius: 10px;
- text-align: center;
- }
+.overlay {
+  background: linear-gradient(to bottom, rgba(154, 93, 245, 0.2), rgba(232, 221, 253, 0.3));
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-.modal{
+.card-body {
+  position: absolute;
+  bottom: 0;
+  /* Alinea el contenido al fondo de la tarjeta */
+  width: 100%;
+  color: white;
+  backdrop-filter: blur(5px);
+  /* Efecto de desenfoque */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
+
+.modal {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -193,33 +224,35 @@ transition: 0.5s;
   z-index: 1;
   overflow: auto;
 }
-  
-.modal-content{
+
+.modal-content {
   background: linear-gradient(to bottom, #CEB6FC, #e1d6fe);
-margin-left: 25rem;
+  margin-left: 25rem;
   color: #141414;
   padding: 20px;
   border-radius: 20px;
-  max-width: 59vh; /* Máximo ancho para asegurar que no sea demasiado grande en pantallas grandes */
+  max-width: 59vh;
+  /* Máximo ancho para asegurar que no sea demasiado grande en pantallas grandes */
 }
 
-.close-btn{
-    display: flex;
-    cursor: pointer;
-    font-size: 36px;
-    margin-left: 0rem;
-    padding: 0;
+.close-btn {
+  display: flex;
+  cursor: pointer;
+  font-size: 36px;
+  margin-left: 0rem;
+  padding: 0;
 }
 
-.formulario,.title-form {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-margin: 0;
+.formulario,
+.title-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
-.input{
+.input {
   display: block;
   background: transparent;
   border: 2px solid #141414;
@@ -228,60 +261,70 @@ margin: 0;
   border-radius: 25px;
 }
 
-.enviar{
-border: 1px rgb(94, 12, 127) solid;
-padding: 1rem;
-border-radius: 23px;
-background: transparent;
-box-shadow: 2px 4px 13px rgb(94 12 137);
-margin-top: 19px;
-transition: 0.4s;
-cursor: pointer;
+.enviar {
+  border: 1px rgb(94, 12, 127) solid;
+  padding: 1rem;
+  border-radius: 23px;
+  background: transparent;
+  box-shadow: 2px 4px 13px rgb(94 12 137);
+  margin-top: 19px;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
-.enviar:hover{
-background: #82D2CF;
-transform: scaleX(1.2);
+.enviar:hover {
+  background: #82D2CF;
+  transform: scaleX(1.2);
 }
 
-.enviar:active{
+.enviar:active {
   background: transparent;
 }
-table{
+
+table {
   padding: 40px;
 }
 
-thead{
+thead {
   background: #555555;
 }
-td, th{
+
+td,
+th {
   border: 1px solid #000000;
   padding: 8px 15px;
 }
+
 .theme-selector {
   position: fixed;
   left: 89rem;
   top: 47rem;
   border-radius: 100%;
-  border: none; /* Sin borde */
-  cursor: pointer; /* Cambia el cursor a mano */
-  font-size: 26px; /* Aumenta el tamaño del icono */
-  color: black; /* Color inicial */
-  transition: color 0.3s; /* Transición suave para el color */
+  border: none;
+  /* Sin borde */
+  cursor: pointer;
+  /* Cambia el cursor a mano */
+  font-size: 26px;
+  /* Aumenta el tamaño del icono */
+  color: black;
+  /* Color inicial */
+  transition: color 0.3s;
+  /* Transición suave para el color */
   z-index: 1;
 }
 
-  footer{
-    padding: 0px;
-    text-align: center;
-    background: url(../../image/bg.jpg)
-  }
+footer {
+  padding: 0px;
+  text-align: center;
+  background: url(../../image/bg.jpg)
+}
 
-  .theme-selector:active{
-    background-color: #0000;
-  }
-  .Copyright{
-    color: #ffffff;
-    font-size: 14px;
-    margin: 20px;
-  }
+.theme-selector:active {
+  background-color: #0000;
+}
+
+.Copyright {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 20px;
+}
