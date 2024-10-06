@@ -6,6 +6,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="" href="recursos/css/stilos.css" />
+  <link rel="stylesheet" type="" href="recursos/css/modal.css" />
+
   <!-- Actividad 2 insertar un favicon en la pagina web --->
   <link rel="icon" href="image/logo.ico" type="image/x-icon" />
   <script src="https://kit.fontawesome.com/19bf97408b.js" crossorigin="anonymous"></script>
@@ -59,11 +61,12 @@
           Pero tambien se uso un poco de js para funcioalidades en el boton
           de contactanos
         </p>
-        <p>
+        <p class="miParrafo" id="miParrafo">
           Esta pagin solo es una muestra de como se usa html5 y css y un
           poco de Lenguaje js
         </p>
       </div>
+      <button type="submit" class="miBoton" id="miBoton"> Hola Soy el Boton magico</button>
     </section>
 
     <section class="card-section">
@@ -117,7 +120,7 @@
       <div class="modal-content">
         <span class="close-btn" id="closeModal">&times;</span>
         <h2 class="title-form">Formulario de Contacto</h2>
-        <form class="formulario" action="">
+        <form class="formulario" id="formulario" action="">
           <label for="nombreapellido">Nombre y apellido</label>
           <input class="input" type="text" id="nombreapellido" required />
 
@@ -127,8 +130,14 @@
           <label for="telefono">Telefono</label>
           <input class="input" type="text" id="telefono" required placeholder="(xxx)-xxx-xxxx" />
 
+          <label for="clave1">contraseña</label>
+          <input class="input" type="password" id="password" required placeholder="xxxxxxxxxx" />
+
+          <label for="clave2">confirma la contraseña</label>
+          <input class="input" type="password" id="password1" required placeholder="xxxxxxxxxx" />
+          <p id="error-message" style="color: red; display: none;"></p> <!-- Mensaje --->
           <label for="mensaje">Mensaje</label>
-          <textarea class="input" id="mensaje" cols="70" rows="10" required></textarea>
+          <textarea class="input" id="mensaje" cols="20" rows="4" required></textarea>
 
           <fieldset>
             <legend class="test">Como le gustario ser contactado</legend>
@@ -188,6 +197,13 @@
     </section>
   </main>
 
+  <!--- modal que muestra los mensajes de error de las contraseñas--->
+  <div id="myModal" class="modal-alert">
+    <div class="modal-message">
+      <span class="cerrar">&times;</span>
+      <p id="modal-message"></p>
+    </div>
+  </div>
   <!-- El footer es para indicar el pie de pagina y el Copyright--->
   <footer>
     <button class="theme-selector" id="theme-selector" type="button">
@@ -196,6 +212,7 @@
     <img src="image/bg1.png" />
     <p class="Copyright">&copy Copyright Taller de html - 2024</p>
   </footer>
+  <script src="recursos/js/sintaxis.js"></script>
   <script src="recursos/js/app.js"></script>
 </body>
 
